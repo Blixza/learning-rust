@@ -14,4 +14,10 @@ fn main() {
     println!("size of `z` in bytes: {}", std::mem::size_of_val(&z));
     println!("size of `i` in bytes: {}", std::mem::size_of_val(&i));
     println!("size of `f` in bytes: {}", std::mem::size_of_val(&f));
+    println!("");
+    println!("size of {} in bytes: {}", x, std::mem::size_of_val(&x));
+    println!("size of {} in bytes: {}", y, std::mem::size_of_val(&y));
+    println!("size of {} in bytes: {}", z, std::mem::size_of_val(&z));
+    println!("size of {} in bytes: {}", i, std::mem::size_of_val(&i));
+    println!("size of {} in bytes: {}", f, std::mem::size_of_val(&f));
 }

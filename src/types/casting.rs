@@ -5,15 +5,15 @@ fn main() {
     let decimal = 65.4321_f32;
 
     // Error! No implicit conversion
-    let integer: u8 = decimal;
+    // let integer: u8 = decimal;
 
     // Explicit conversion
     let integer = decimal as u8;
     let character = integer as char;
 
     // Error! There are limitations in conversion rules
-    // A float cannot be directly conveted to be a char
-    let character = integer as char;
+    // A float cannot be directly convented to be a char
+    // let character = integer as char;
 
     println!("Casting: {} -> {} -> {}", decimal, integer, character);
 
@@ -56,9 +56,9 @@ fn main() {
     // will be equal to the bound crossed
 
     // 300.0 as u8 is 255
-    println!("  300.0 as u8 is : {}", 300.0 as u8);
+    println!("  300.0 as u8 is : {}", 300.0_f32 as u8);
     // -100.0 as u8 is 0
-    println!("  -100 as u8 is : {}", -100 as u8);
+    println!("  -100 as u8 is : {}", -100_f32 as u8);
     // nan as u8 is 0
     println!("  nan as u8 is : {}", f32::NAN as u8);
 
@@ -69,7 +69,7 @@ fn main() {
         // 300.0 as u8 is 44
         println!("  300.0 as u8 is : {}", 300.0_f32.to_int_unchecked::<u8>());
         // -100.0 as u8 is 156
-        println!("  -100.0 as u8 is : {}", -100.0_f32.to_int_unchecked::<u8>());
+        println!("  -100.0 as u8 is : {}", (-100.0_f32).to_int_unchecked::<u8>());
         // nan as u8 is 0
         println!("  nan as u8 is : {}", f32::NAN.to_int_unchecked::<u8>());
     }
